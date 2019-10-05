@@ -1,0 +1,61 @@
+<div class="card" style="width: 600px;">
+    <div class="card-header">
+        Tính thưởng tết nguyên đán
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label>Họ và tên:</label>
+                <input type="name" [(ngModel)]="thongtin.hoten" [ngModelOptions]="{standalone: true}"
+                 (keyup)="hidden()" class="form-control" required>
+                <div class="alert alert-danger" role="alert" [hidden]="forgot">
+                    vui lòng nhập họ và tên
+                </div>
+                <div
+                class="alert alert-primary" role="alert" [hidden]="forgot1">
+                    Nhập đúng
+                </div>
+            </div>
+            <label>Lương</label>
+            <div class="input-group">
+                <input type="number" [(ngModel)]="thongtin.luong" [ngModelOptions]="{standalone: true}"
+                (keyup)="hiddenluong()"
+                    class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">VNĐ</span>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert" [hidden]="hdluong">
+                Lương ít nhất 2tr
+            </div>
+            <div class="alert alert-primary" role="alert" [hidden]="ndluong">
+                Nhập đúng
+            </div>
+            <br>
+            <label>Giới Tính</label>
+            <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Nam"
+                    [(ngModel)]="thongtin.gioitinh" [ngModelOptions]="{standalone: true}">
+                <label class="form-check-label">Nam</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Nu"
+                    [(ngModel)]="thongtin.gioitinh" [ngModelOptions]="{standalone: true}">
+                <label class="form-check-label">Nu</label>
+            </div>
+            <br>
+            <br>
+            <label>Độ tuổi</label>
+            <div class="input-group">
+                <select class="custom-select" [(ngModel)]="thongtin.rate" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let tuoi of list" value="{{tuoi.rate}}">{{tuoi.age}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="card-header">
+        Tiền thưởng: {{Tinh()}} VNĐ
+    </div>
+
+</div>

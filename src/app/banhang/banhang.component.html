@@ -1,0 +1,45 @@
+<div class="card" style="width: 600px;">
+    <div class="card-header">
+        Bán hàng giải khát
+    </div>
+    <div class="card-body">
+        <form>
+            <table>
+                <tr >
+                    <th style="width: 20px;"></th>
+                    <th style="width: 70px;">Tên hàng</th>
+                    <th style="width: 150px;">Số lượng</th>
+                    <th style="width: 50px;">Đơn giá</th>
+                    <th style="width: 60px;">Thành Viên</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="exampleCheck1" value="nuocngot" [(ngModel)]="type.nuocngot" [ngModelOptions]="{standalone: true}"></td>
+                    <td> Nước ngọt</td>
+                    <td><input type="number" [(ngModel)]="soluong.slnuocngot" [ngModelOptions]="{standalone: true}"></td>
+                    <td>$10,000</td>
+                    <td>${{TTNuocNgot()}}</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="exampleCheck2" value="caphe" [(ngModel)]="type.caphe" [ngModelOptions]="{standalone: true}"></td>
+                    <td>Cà phê đen</td>
+                    <td><input type="number" [(ngModel)]="soluong.slcaphe" [ngModelOptions]="{standalone: true}"></td>
+                    <td>$12,000</td>
+                    <td>
+                    ${{TTCaPhe()}}
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="exampleCheck3" value="thuocla" [(ngModel)]="type.thuocla" [ngModelOptions]="{standalone: true}"></td>
+                    <td>Thuốc lá</td>
+                    <td><input type="number" [(ngModel)]="soluong.slthuocla" [ngModelOptions]="{standalone: true}"></td>
+                    <td>$18,000</td>
+                    <td>${{TTThuocLa()}}</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="card-header">
+       Tongtien: <b>{{Tongtien()}}</b> 
+    </div>
+
+</div>

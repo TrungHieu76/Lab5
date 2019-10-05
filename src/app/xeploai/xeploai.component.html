@@ -1,0 +1,28 @@
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ho va ten:</label>
+        <input type="text" class="form-control" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">ngay sinh:</label>
+        <input type="date" class="form-control" [(ngModel)]="student.date" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">gioi tinh:</label>
+        <select style="width: 800px">
+            <option value="Nam">Nam</option>
+            <option value="Nu">Nu</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">diem:</label>
+        <input type="number" [(ngModel)]="student.diem" [ngModelOptions]="{standalone: true}" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">hoc luc:</label>
+        <div class="alert alert-success" [(ngModel)]="student.result" [ngModelOptions]="{standalone: true}">
+            {{student.result}}
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="xeploai()">xep loai</button>
+</form>
