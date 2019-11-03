@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BTVN';
+  title = 'Buoi9';
 }

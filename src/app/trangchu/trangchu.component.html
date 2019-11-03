@@ -1,0 +1,17 @@
+We have a geat selection of musical instruments including guitars, basses and drums. And 
+we're constanly adding more to give you the best selection possible!
+<br>
+<font size=+3 color="red"><b>Featured products</b></font>
+<form style="height:20% ;" *ngFor="let item of listguitar">
+    <div class="form-left">
+        <img src="{{item.url}}">
+    </div>
+    <div class="form-right">
+        <a [routerLink]='["/chitiet",item.id]'><b class="tensp"><u>{{item.productname}}</u> </b></a>
+        <br>
+        <b>Your price:</b> ${{item.price}}<br>
+        {{item.description}}
+    </div>
+</form>
+
+

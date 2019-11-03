@@ -1,0 +1,20 @@
+
+.form-img{
+    width: 30%;
+    float: left;
+}
+.form-body{
+  width: 60%;  
+  float: left;
+}
+.form-img img{
+ width: 100%;
+}
+.col3{
+  width: 30%;
+  float: left;
+}
+.col9{
+  width: 50%;
+  float: left;
+}

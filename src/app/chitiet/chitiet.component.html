@@ -1,0 +1,33 @@
+   <header>{{guitarTuongUngId.productname}}</header>
+    <br>
+    <form>
+        <div class="form-img">
+         <img src="{{guitarTuongUngId.url}}">
+        </div>
+        <div class="form-body" >
+            <table>
+                <tr>
+                    <th><b>List Price:</b><br></th>
+                    <th>${{guitarTuongUngId.price}}</th>
+                </tr>
+                <tr>
+                    <td><b>Discount:</b><br></td>
+                    <td>{{guitarTuongUngId.discount}}%</td>
+                </tr>
+                <tr>
+                    <td><b>Your Price:</b><br></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Quantity:</b></td>
+                    <td><input type="number"><button >Add to Cart</button></td>
+                </tr>
+            </table>
+            <font color="blue" size=+2>Description</font><br>
+            {{guitarTuongUngId.description}}
+            New features:
+            <ul ng *ngFor="let i of feature">
+                <li>{{i.text}}</li>
+            </ul>
+        </div>
+</form>

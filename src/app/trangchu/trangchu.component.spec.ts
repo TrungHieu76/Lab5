@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XeploaiComponent } from './xeploai.component';
+import { TrangchuComponent } from './trangchu.component';
 
-describe('XeploaiComponent', () => {
-  let component: XeploaiComponent;
-  let fixture: ComponentFixture<XeploaiComponent>;
+describe('TrangchuComponent', () => {
+  let component: TrangchuComponent;
+  let fixture: ComponentFixture<TrangchuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ XeploaiComponent ]
+      declarations: [ TrangchuComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(XeploaiComponent);
+    fixture = TestBed.createComponent(TrangchuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
